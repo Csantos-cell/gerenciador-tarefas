@@ -27,7 +27,7 @@ if st.button("➕ Adicionar"):
         tarefas.append(f"{nova_tarefa} | {prazo if prazo else 'Sem prazo'}")
         salvar_tarefas(tarefas)
         st.success("Tarefa adicionada com sucesso!")
-        st.experimental_rerun()
+        st.rerun()
 
 # Ver tarefas
 if tarefas:
@@ -40,6 +40,6 @@ if tarefas:
         if col2.button("❌", key=i):
             tarefas.pop(i)
             salvar_tarefas(tarefas)
-            st.experimental_rerun()
+            st.rerun()
 else:
     st.info("Nenhuma tarefa ainda. Adicione acima!")
